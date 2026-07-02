@@ -59,6 +59,7 @@ public class AutoUpdater: NSObject, SPUUpdaterDelegate {
         )
         _updater?.clearFeedURLFromUserDefaults()
         try? _updater?.start()
+        _updater?.automaticallyDownloadsUpdates = true
     }
     
     public func feedURLString(for updater: SPUUpdater) -> String? {
